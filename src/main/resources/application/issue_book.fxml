@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.IssueBookController"
+      spacing="10.0">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <children>
+        <Label text="Issue Book" style="-fx-font-size: 18px;"/>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Book Title:" minWidth="90.0"/>
+                <TextField fx:id="bookTitleField" promptText="Enter book title"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Book ID:" minWidth="90.0"/>
+                <TextField fx:id="bookIdField" promptText="Enter book ID"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Student ID:" minWidth="90.0"/>
+                <TextField fx:id="studentIdField"
+                           promptText="Enter roll no (press Enter)"
+                           onAction="#loadStudentName"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Student Name:" minWidth="90.0"/>
+                <ComboBox fx:id="studentNameCombo"
+                          promptText="Name auto-selects after ID"
+                          editable="false"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Date:" minWidth="90.0"/>
+                <TextField fx:id="dateField"
+                           promptText="dd-MM-yyyy (e.g. 29-11-2025)"/>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <children>
+                <Button text="Issue Book" onAction="#issueBook"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>

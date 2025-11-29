@@ -1,0 +1,12 @@
+2025-11-27 18:38:50.989838+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found (this database is empty); SQL statement:
+SELECT id, name, course, session FROM students [42104-224]
+2025-11-27 18:38:50.996829+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOKS" not found (this database is empty); SQL statement:
+SELECT id, title, author, edition FROM books [42104-224]
+2025-11-27 18:38:51.004826+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found (this database is empty); SQL statement:
+SELECT type, bookTitle, bookId, studentName, studentId, date FROM transactions [42104-224]
+2025-11-27 18:39:22.489511+05:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTS" not found (this database is empty); SQL statement:
+MERGE INTO students (id, name, course, session) KEY(id) VALUES (?, ?, ?, ?) [42104-224]

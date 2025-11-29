@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.LoginController"
+      spacing="20.0">
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <children>
+        <Label text="Library Management System"
+               style="-fx-font-size: 24px; -fx-text-fill: #2c3e50;"/>
+
+        <Label text="Login"
+               style="-fx-font-size: 16px;"/>
+
+        <VBox spacing="15.0">
+            <children>
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Username:" minWidth="80.0"/>
+                        <TextField fx:id="usernameField" promptText="admin"/>
+                    </children>
+                </HBox>
+
+                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Password:" minWidth="80.0"/>
+                        <PasswordField fx:id="passwordField" promptText="admin123"/>
+                    </children>
+                </HBox>
+
+                <Label fx:id="messageLabel" textFill="RED"/>
+
+                <HBox alignment="CENTER">
+                    <children>
+                        <Button text="Login" onAction="#handleLogin"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>

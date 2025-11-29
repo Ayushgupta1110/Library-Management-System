@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fitToWidth="true" fx:controller="application.DashboardController">
+   <content>
+      <VBox spacing="20.0">
+         <children>
+            <Label style="-fx-font-size: 24px; -fx-text-fill: #2c3e50;" text="📚 Library Management Dashboard" />
+            
+            <!-- Action Buttons -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Button onAction="#openAddStudent" text="➕ Add Student" />
+                  <Button onAction="#openAddBook" text="📖 Add Book" />
+                  <Button onAction="#openIssueBook" text="📤 Issue Book" />
+                  <Button onAction="#openReturnBook" text="📥 Return Book" />
+               </children>
+            </HBox>
+            
+            <!-- Students Section -->
+            <VBox spacing="5.0">
+               <Label style="-fx-font-size: 18px; -fx-text-fill: #34495e;" text="👥 Students" />
+               <TableView fx:id="studentTable" prefHeight="150.0">
+                  <columns>
+                     <TableColumn fx:id="colName" prefWidth="200.0" text="Name" />
+                     <TableColumn fx:id="colId" prefWidth="80.0" text="ID" />
+                     <TableColumn fx:id="colCourse" prefWidth="150.0" text="Course" />
+                     <TableColumn fx:id="colSession" prefWidth="100.0" text="Session" />
+                  </columns>
+               </TableView>
+            </VBox>
+            
+            <!-- Books Section -->
+            <VBox spacing="5.0">
+               <Label style="-fx-font-size: 18px; -fx-text-fill: #34495e;" text="📚 Books" />
+               <TableView fx:id="bookTable" prefHeight="150.0">
+                  <columns>
+                     <TableColumn fx:id="colBookId" prefWidth="80.0" text="ID" />
+                     <TableColumn fx:id="colBookTitle" prefWidth="250.0" text="Title" />
+                     <TableColumn fx:id="colAuthor" prefWidth="150.0" text="Author" />
+                     <TableColumn fx:id="colEdition" prefWidth="100.0" text="Edition" />
+                  </columns>
+               </TableView>
+            </VBox>
+            
+            <!-- Transactions Section -->
+            <VBox spacing="5.0">
+               <Label style="-fx-font-size: 18px; -fx-text-fill: #34495e;" text="📋 Transactions" />
+               <TableView fx:id="transactionTable" prefHeight="200.0">
+                  <columns>
+                     <TableColumn fx:id="colType" prefWidth="80.0" text="Type" />
+                     <TableColumn fx:id="colTBookTitle" prefWidth="200.0" text="Book Title" />
+                     <TableColumn fx:id="colTBookId" prefWidth="80.0" text="Book ID" />
+                     <TableColumn fx:id="colStudentName" prefWidth="150.0" text="Student" />
+                     <TableColumn fx:id="colStudentId" prefWidth="80.0" text="Student ID" />
+                     <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+                  </columns>
+               </TableView>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

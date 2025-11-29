@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.AddBookController"
+      spacing="10.0">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <children>
+        <Label text="Add New Book" style="-fx-font-size: 18px;"/>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Book ID:" minWidth="80.0"/>
+                <TextField fx:id="bookIdField" promptText="Enter numeric ID"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Title:" minWidth="80.0"/>
+                <TextField fx:id="bookTitleField" promptText="Enter book title"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Author:" minWidth="80.0"/>
+                <TextField fx:id="authorField" promptText="Enter author"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <Label text="Edition:" minWidth="80.0"/>
+                <TextField fx:id="editionField" promptText="Enter edition"/>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <children>
+                <Button text="Add Book" onAction="#addBook"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>
