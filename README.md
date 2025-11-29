@@ -27,42 +27,6 @@ Tech Stack
 - JDBC
 
 ---
-
-Project Structure
-
-.
-├── pom.xml
-└── src
-└── main
-├── java
-│ └── application
-│ ├── AddBookController.java
-│ ├── AddStudentController.java
-│ ├── Book.java
-│ ├── BookData.java
-│ ├── DashboardController.java
-│ ├── DBConnection.java # (optional helper, if used)
-│ ├── DBManager.java
-│ ├── IssueBookController.java
-│ ├── LoginController.java
-│ ├── Main.java
-│ ├── ReturnBookController.java
-│ ├── Student.java
-│ ├── StudentData.java
-│ ├── Transaction.java
-│ ├── TransactionData.java
-│ ├── User.java
-│ ├── UserData.java
-│ └── module-info.java
-└── resources
-└── application
-├── add_book.fxml
-├── add_student.fxml
-├── dashboard.fxml
-├── issue_book.fxml
-├── login.fxml
-└── return_book.fxml
-
 Database Setup (MySQL)
 
 1. Create the database and tables:
