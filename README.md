@@ -17,7 +17,6 @@ Features
 - MySQL persistence
 
 ---
-
 Tech Stack
 
 - Java 17
@@ -27,70 +26,6 @@ Tech Stack
 - JDBC
 
 ---
-Database Setup (MySQL)
-
-1. Create the database and tables:
-
-CREATE DATABASE IF NOT EXISTS LibraryManagementSystem;
-USE LibraryManagementSystem;
-
-DROP TABLE IF EXISTS transactions;
-DROP TABLE IF EXISTS books;
-DROP TABLE IF EXISTS students;
-DROP TABLE IF EXISTS users;
-
-CREATE TABLE students (
-id INT PRIMARY KEY,
-name VARCHAR(100),
-course VARCHAR(100),
-session VARCHAR(50)
-);
-
-CREATE TABLE books (
-id INT PRIMARY KEY,
-title VARCHAR(200),
-author VARCHAR(100),
-edition VARCHAR(50)
-);
-
-CREATE TABLE transactions (
-type VARCHAR(50),
-bookTitle VARCHAR(200),
-bookId VARCHAR(50),
-studentName VARCHAR(100),
-studentId INT,
-date DATE
-);
-
-CREATE TABLE users (
-id INT AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(50) UNIQUE NOT NULL,
-password VARCHAR(100) NOT NULL,
-role VARCHAR(50) DEFAULT 'ADMIN'
-);
-
-INSERT INTO users (username, password, role)
-VALUES ('admin', 'admin123', 'ADMIN');
-
-text
-
-2. Make sure your MySQL server is running on `127.0.0.1:3306`.
-
----
-
-Configure Database in Code
-
-In `src/main/java/application/DBManager.java`, set your MySQL credentials:
-
-private static final String JDBC_URL =
-"jdbc:mysql://127.0.0.1:3306/LibraryManagementSystem?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
-private static final String USER = "root";
-private static final String PASSWORD = "Ayush@05";
-
-text
-
----
-
 How to Run
 
 From the project root:
@@ -112,11 +47,3 @@ Then:
 - Use **Return Book** similarly.
 
 ---
-
-Notes
-- This project is intended as a learning/demo project for JavaFX + MySQL.
-- You can modify the UI (FXML files) with Scene Builder.
-- Feel free to extend it with validations, search, and reporting features.
-- This project is intended as a learning/demo project for JavaFX + MySQL.
-- You can modify the UI (FXML files) with Scene Builder.
-- Feel free to extend it with validations, search, and reporting features.
